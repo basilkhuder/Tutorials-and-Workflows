@@ -18,4 +18,4 @@ If you simply renamed the identities like guided by the Seurat PBMC tutorial, th
 
 Now, when you run SingleR, just set ref = ref, and labels = labels, and the rest of the parameters depending on what exactly you are wanting: 
 
-`SingleR(test = single_cell_obj, ref = counts, labels = labels, method = "single")`
+`SingleR(test = single_cell_obj, ref = ref, labels = labels, method = "single")`
