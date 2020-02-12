@@ -10,7 +10,7 @@ This is a fairly straight forward process with an annotated Seurat object. First
 
 Then, extract the annotated clusters. The exact code will differ, depending on how you stored the cluster names. If you stored them as a new type of meta-data, extract them through: 
 
-`labels <- seurat_obj@meta.data$Cluster_Names`
+`labels <- seurat_obj@meta.data$Metadata_Name`
 
 If you simply renamed the identities like guided by the Seurat PBMC tutorial, then extract them by:
 
