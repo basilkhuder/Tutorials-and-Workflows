@@ -1,7 +1,7 @@
 ## Creating a Custom SingleR Reference Based Upon a Seurat Object
 
 A SingleR reference is composed of the following: 
-- A matrix with cell IDs and gene names
+- A matrix with gene names as rows and cell IDs as columns
 - Celltype labels for each cell ID
 
 This is a fairly straight forward process with an annotated Seurat object. First, extract the counts using `GetAssayData()`:
