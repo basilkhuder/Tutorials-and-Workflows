@@ -25,6 +25,15 @@ Finally, we'll use SingleR's *aggregateReference* for pseudo-bulk aggregation:
 
 `ref <- aggregateReference(ref,labels)`
 
-Now, when you run SingleR, just set ref = ref, and labels = labels, and the rest of the parameters depending on what exactly you are wanting: 
+Now, when you run SingleR, just set ref = ref, and labels = ref$labels, and the rest of the parameters depending on what exactly you are wanting: 
 
 `SingleR(test = single_cell_obj, ref = ref, labels = labels, method = "single")`
+
+### Using Seurat's AverageExpression Function
+We can also use Seurat's *AverageExpression* function to aggregate our cells into a pseudo-bulk. Just like before, we'll extract counts using *GetAssayData* and labels through our object's meta-data. But, we'll use *AverageExpression* instead of SingleR's *aggregateReference*:
+
+```
+seurat_obj_avg <- AverageExpression(seurat_obj, assay = "RNA")
+labels <- colnames(seurat_obj_avg)
+SingleR(test = single_cell_obj, ref = seurat_obj_ag, labels = labels, method = "single")
+```
