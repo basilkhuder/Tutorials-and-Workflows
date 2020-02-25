@@ -29,6 +29,7 @@ Now, when you run SingleR, just set ref = ref, and labels = ref$labels, and the 
 
 `SingleR(test = single_cell_obj, ref = ref, labels = labels, method = "single")`
 
+*Don't forget to cast your Seurat object to a SingleCellExperiment object using as.SingleCellExperiment()*
 ### Using Seurat's AverageExpression Function
 We can also use Seurat's *AverageExpression* function to aggregate our cells into a pseudo-bulk. Just like before, we'll extract counts using *GetAssayData* and labels through our object's meta-data. But, we'll use *AverageExpression* instead of SingleR's *aggregateReference*:
 
