@@ -35,5 +35,5 @@ We can also use Seurat's *AverageExpression* function to aggregate our cells int
 ```
 seurat_obj_avg <- AverageExpression(seurat_obj, assay = "RNA")
 labels <- colnames(seurat_obj_avg)
-SingleR(test = single_cell_obj, ref = seurat_obj_ag, labels = labels, method = "single")
+SingleR(test = single_cell_obj, ref = seurat_obj_ag, labels = labels, method = "desired_method")
 ```
