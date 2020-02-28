@@ -1,4 +1,4 @@
-#Creates Seurat objects from CellRanger Folders
+#Creates Seurat objects from CellRanger Filtered Output Folder
 
 crToSeurat <- function(directory){ 
   
