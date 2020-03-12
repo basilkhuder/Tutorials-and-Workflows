@@ -43,7 +43,7 @@ SingleR(test = as.SingleCellExperiment(seurat_obj), ref = ref, labels = labels, 
 We can also use Seurat's *AverageExpression* function to aggregate our cells into a pseudo-bulk. Just like before, we'll extract counts using *GetAssayData* and labels through our object's meta-data. But, we'll use *AverageExpression* instead of SingleR's *aggregateReference*:
 
 ```r
-seurat_obj_avg <- as.matrix(Seurat::AverageExpression(seurat_obj, assay = "RNA")$RNA)
+seurat_obj_avg <- as.matrix(AverageExpression(seurat_obj, assay = "RNA")$RNA)
 labels <- colnames(seurat_obj_avg)
 SingleR(test = as.SingleCellExperiment(seurat_obj), ref = seurat_obj_avg, labels = labels, method = "desired_method")
 ```
